@@ -7,7 +7,7 @@ namespace Lists_Kohnen_Christian
     {
         static void Main(string[] args)
         {
-            List<string> games = new List<string>
+            List<string> games = new List<string>                               //Creates the string list of games
             {
                 "CS;GO",
                 "Halo 3",
@@ -16,64 +16,64 @@ namespace Lists_Kohnen_Christian
                 "Minecraft"
             };
 
-            string[] otherGames = new string[]
+            string[] otherGames = new string[]                                  //creates an array string of otherGames
             {
             "Tiny Tina's Wonderlands",
             "Farcry 3"
             };
 
-            foreach(string game in games)
+            foreach(string game in games)                                       //for each game in the game list, it prints it
             {
                 Console.WriteLine(game);
             }
 
-            Console.WriteLine($"\nGames in list: {games.Count}");
+            Console.WriteLine($"\nGames in list: {games.Count}");               //it counts the number of games in the list and prints the result
 
-            games.AddRange(otherGames);
+            games.AddRange(otherGames);                                         //adds a range from othergames to games
 
-            Console.WriteLine($"\nGames in list: {games.Count}");
+            Console.WriteLine($"\nGames in list: {games.Count}");               //it counts the number of games in the list and prints the result
 
-            if (games.Contains("Halo"))
+            if (games.Contains("Halo"))                                         //if there is a game that starts with Halo, it prints out a meme
             {
                 Console.WriteLine("\nTHEY PUT THAH MASTA CHEEF IN DA SODA!!!");
             }
-            else
+            else                                                                //otherwise, it adds halo to the list
             {
                 games.Add("Halo");
             }
 
-            int myInt = 6;
+            int myInt = 6;                                                      //creates an Int and gives it the value 6
 
-            if(myInt < games.Count)
+            if (myInt < games.Count)                                            //if the intiger is less than the number of games in the list, it removes the game that went over
             {
                 games.RemoveAt(myInt);
             }
-            else
+            else                                                                //otherwise it prints game not found
             {
                 Console.WriteLine("\nGame not Found!");
             }
 
-            Console.WriteLine("\nAll games in the list:");
-            foreach (string game in games)
+            Console.WriteLine("\nAll games in the list:");                      //title for the list
+            foreach (string game in games)                                      //for each game in the game list, it prints it
             {
                 Console.WriteLine(game);
             }
 
-            games.Sort();
-            Console.WriteLine("\nSorted games:");
-            foreach (string game in games)
+            games.Sort();                                                       //it sorts the game list
+            Console.WriteLine("\nSorted games:");                               //a title that states what makes the list different
+            foreach (string game in games)                                      //for each game in the game list, it prints it
             {
                 Console.WriteLine(game);
             }
 
-            string[] newList = new string[games.Count];
+            string[] newList = new string[games.Count];                         //creates an array called newList and is initialized by the same size as the game list
 
-            games.CopyTo(newList);
+            games.CopyTo(newList);                                              //copies the game list to the newList
 
-            games.Clear();
+            games.Clear();                                                      //clears the game list
 
-            Console.WriteLine("\nNew List:");
-            foreach(string game in newList)
+            Console.WriteLine("\nNew List:");                                   //title of the new list
+            foreach(string game in newList)                                     //for each game in the game list, it prints it
             {
                 Console.WriteLine(game);
             }
